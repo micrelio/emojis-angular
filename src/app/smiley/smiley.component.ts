@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./smiley.component.scss']
 })
 export class SmileyComponent {
+  showNumEmojis: number =Infinity;
   //cramos el array
   emojis = ['😀', '😁', '😂', 
   '😃',  '😄',  '😅', '😆', '😉', 
