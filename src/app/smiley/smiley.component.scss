@@ -1,19 +1,39 @@
 * {
-  color:grey;
+  color: grey;
   font-size: 40px;
-  background: {
-    color:black;
-}
+
+
 }
 
-.grid{
+.fondo {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  background: {
+    color: black;
+
+  }
+
+  .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, 4em);
-    grid-gap:0.7em
+    grid-gap: 0.7em;
+    width: 50%;
+  }
+
+  .grad {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 4em);
+    grid-gap: 0.7em;
+    width: 50%;
+  }
+
+
 }
 
-input{
-    background: {
-        color:white;
-    }
+
+input {
+  background: {
+    color: white;
+  }
 }

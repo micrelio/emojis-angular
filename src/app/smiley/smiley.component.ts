@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./smiley.component.scss']
 })
 export class SmileyComponent {
-  showNumEmojis: number =undefined;
+  showNumEmojis: string =' ';
   //cramos el array
   // emojis = ['😀', '😁', '😂', 
   // '😃',  '😄',  '😅', '😆', '😉', 
