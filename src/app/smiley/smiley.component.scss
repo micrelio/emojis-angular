@@ -1,4 +1,19 @@
 * {
   color:grey;
   font-size: 40px;
+  background: {
+    color:black;
+}
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 4em);
+    grid-gap:0.7em
+}
+
+input{
+    background: {
+        color:white;
+    }
 }

@@ -1,11 +1,14 @@
 <!-- esto se mostrara en pantalla -->
 <div>
-  Emojis: 
-<input type='number'  [(ngModel)]="showNumEmojis" 
-placeholder="Cuantos quieres mostrar?"/>
+  Emojis:
+  <input type='number' [(ngModel)]="showNumEmojis" placeholder="Cuantos quieres mostrar?" />
+  <div *ngIf="showNumEmojis > emojis.length"> Hay menos emojis de los que quieres mostrar</div>
 
-<!-- nhFor recorrrera el arary situado en smiley.component.ts -->
-  <div *ngFor="let emoji of emojis; let i = index">
-<!-- compara  i con show emogis y pinta -->
-  <div *ngIf="i <= showNumEmojis"> {{i}} {{emoji}} </div>
-</div>
+  <div class='grid'>
+    <!-- nhFor recorrrera el arary situado en smiley.component.ts -->
+    <div *ngFor="let emoji of emojis; let i = index">
+      <!-- compara  i con show emogis y pinta -->
+
+      <div *ngIf="i <= showNumEmojis"> {{i}} {{emoji}} </div>
+    </div>
+  </div>
