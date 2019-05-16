@@ -9,25 +9,25 @@
   width: 100%;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   background: {
     color: black;
 
   }
-
+  .grad,
+  .grud,
   .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, 4em);
     grid-gap: 0.7em;
-    width: 50%;
+    display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+   
   }
 
-  .grad {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 4em);
-    grid-gap: 0.7em;
-    width: 50%;
-  }
-
+  
+  
 
 }
 
