@@ -3,31 +3,40 @@
   Emojis:
   <input type='number' [(ngModel)]="showNumEmojis" placeholder="Cuantos quieres mostrar?" />
   <div *ngIf="showNumEmojis > emojis.length"> Hay menos emojis de los que quieres mostrar</div>
-<div class="fondo">
-  <div class='grid'>
-    <!-- nhFor recorrrera el arary situado en smiley.component.ts -->
-    <div *ngFor="let emoji of emojis; let i = index">
-      <!-- compara  i con show emogis y pinta -->
+  <div class="fondo">
+    <div class='grid'>
+      <!-- nhFor recorrrera el arary situado en smiley.component.ts -->
+      <div *ngFor="let emoji of emojis; let i = index">
+        <!-- compara  i con show emogis y pinta -->
 
-      <div *ngIf="i <= showNumEmojis && showNumEmojis <= emojis.length && showNumEmojis != 0"> {{i}} {{emoji}} </div>
+        <div *ngIf="i <= showNumEmojis && showNumEmojis <= emojis.length && showNumEmojis != 0"> {{i}} {{emoji}} </div>
+      </div>
     </div>
-  </div>
 
-  <div class='grad' [style.background-color]="showNumEmojis% 2 == 0 ? 'green': 'orange'" >
-    <!-- nhFor recorrrera el arary situado en smiley.component.ts -->
-    <div *ngFor="let emoji of emojis; let i = index">
-      <!-- compara  i con show emogis y pinta -->
 
-      <div *ngIf="i <= showNumEmojis && showNumEmojis <= emojis.length && showNumEmojis != 0"> {{i}} {{emoji}} </div>
+    <div class='grad' [style.background-color]="showNumEmojis% 2 == 0 ? 'green': 'orange'">
+      <!-- nhFor recorrrera el arary situado en smiley.component.ts -->
+      <div *ngFor="let emoji of emojis; let i = index">
+        <!-- compara  i con show emogis y pinta -->
+
+        <div *ngIf="i <= showNumEmojis && showNumEmojis <= emojis.length && showNumEmojis != 0"> {{i}} {{emoji}} </div>
+      </div>
     </div>
-  </div>
 
-  <div class='grud' [style.background-color]="showNumEmojis% 2 == 0 ? 'orange': 'green'" >
-    <!-- nhFor recorrrera el arary situado en smiley.component.ts -->
-    <div *ngFor="let emoji of emojis; let i = index">
-      <!-- compara  i con show emogis y pinta -->
 
-      <div *ngIf="i <= showNumEmojis && showNumEmojis <= emojis.length && showNumEmojis != 0"> {{i}} {{emoji}} </div>
+
+    <div class='grud'>
+      <!-- nhFor recorrrera el arary situado en smiley.component.ts -->
+      <div *ngFor="let emoji of emojis; let i = index">
+        <!-- compara  i con show emogis y pinta -->
+        
+        <div [ngSwitch]="i <= showNumEmojis">            
+           
+          <div *ngSwitchCase="true">
+              {{i}} {{emoji}}
+          </div>
+         
+        </div>
+      </div>
     </div>
-  </div>
   </div>
